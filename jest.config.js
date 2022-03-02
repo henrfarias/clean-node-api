@@ -6,11 +6,12 @@
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  collectCoverage: true,
+  collectCoverage: false,
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageProvider: 'v8',
   transform: {
     '.+\\.ts$': 'ts-jest'
-  }
+  },
+  transformIgnorePatterns: ['/node_modules']
 }
